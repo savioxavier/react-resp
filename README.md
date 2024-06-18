@@ -32,15 +32,11 @@ import { Mobile, Tablet, Laptop } from 'react-resp'
 const Navbar = () => {
   <nav className="navbar">
       <div className="navbar-description">
-      <p>
-          <Mobile>Mobile: Short Description</Mobile>
-          <Tablet>
-          Tablet: Slightly longer description visible on a tablet screen
-          </Tablet>
-          <Laptop>
-          Laptop: A very long description on the navbar and has a lot of words
-          </Laptop>
-      </p>
+        <Mobile>Mobile: Short Description</Mobile>
+        <Tablet>Tablet: Slightly longer description on a tablet screen</Tablet>
+        <Laptop>
+          Laptop: A very long description that is displayed on laptop screens and has a lot of words
+        </Laptop>
       </div>
   </nav>
 }
@@ -51,7 +47,7 @@ const Navbar = () => {
 By using a combination of `<[Viewport]>` and `<Not[Viewport]>`, you can dynamically render specific components on a single viewport of your choice, and render something else on all other viewport except the one you've already targeted
 
 ```jsx
-import { Mobile, Tablet, Laptop } from 'react-resp'
+import { Mobile, NotMobile } from 'react-resp'
 
 const Navbar = () => {
   <nav className="navbar">
@@ -64,6 +60,8 @@ const Navbar = () => {
   </nav>
 }
 ```
+
+This approach could useful in various practical situations. For example, if you wanted to render all navbar links on tablet and laptop devices, but display a hamburger icon on mobile, you could this library to accomplish your task
 
 ## 🔮 API
 
